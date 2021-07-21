@@ -1,0 +1,34 @@
+body{
+  background: #F3F9F9;
+  padding-top: 25vh;
+}
+form{
+  background: #F3F9F9;
+}
+.form-container{
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 0px 0px 0px;
+}
+.form-input button {
+	width: 40%;
+	margin: 10px 0 25px;
+}
+.btn {
+	background-color: #8f3333;
+	color: white;
+	font-size: 19px;
+	font-weight: 600;
+	border: 2px solid white;
+	padding: 7px 14px;
+}
+.btn:hover {
+	background-color: #264d69;
+	color: white;
+}
+.forgot {
+	padding: 5px 0 25px;
+}
+.forgot a {
+	color: rgb(12, 12, 12);
+}
