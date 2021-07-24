@@ -112,9 +112,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="row d-flex">
                 <div class="col-lg-6">
                     <div class="card1 pb-5">
-                        <div class="row"> <img src="https://i.imgur.com/CXQmsmF.png" class="logo"> </div>
+                        <div class="row"> <img src="https://via.placeholder.com/140x100" class="logo"> </div>
                         <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img
-                                src="https://i.imgur.com/uNGdWHi.png" class="image"> </div>
+                                src="https://via.placeholder.com/150" class="image"> </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -149,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
             <div class="bg-blue py-4">
-                <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2019. All rights
+                <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2021. All rights
                         reserved.</small>
                     <div class="social-contact ml-4 ml-sm-auto"> <span class="fa fa-facebook mr-4 text-sm"></span> <span
                             class="fa fa-google-plus mr-4 text-sm"></span> <span
