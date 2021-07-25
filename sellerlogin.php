@@ -5,7 +5,7 @@ session_start();
 
 //Page ID
 
-$pageID = "Login";
+$pageID = "SellerLogin";
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
@@ -108,22 +108,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="container px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
-        <div class="card card0 border-0">
+        <div class="card selcard0 border-0">
             <div class="row d-flex">
-                <div class="col-md-6">
-                    <div class="card1 pb-5">
-                        <div class="row"> <img src="https://via.placeholder.com/140x100" class="logo"> </div>
-                        <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img
-                                src="https://via.placeholder.com/150" class="image"> </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
 
+                <div class="col-lg-6">
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                        <div class="card2 card border-0 px-4 py-5">
-                            <h1 class="mb-5 text-lg">Sign-In</h1>
+                        <div class="scard2 card border-0 px-4 py-5">
+                            <h1 class="mb-5 text-lg">Seller Central Sign-In</h1>
                             <div class="row px-3"> <label class="mb-1"
-                                    <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                                    <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>>
                                     <h6 class="mb-0 text-sm">Email Address</h6>
                                 </label>
                                 <input class="mb-4" type="email" name="email" placeholder="Enter a valid email address"
@@ -152,7 +145,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <div class="row mb-3 px-3"> <button type="submit"
                                     class="btn btn-blue text-center">Login</button> </div>
                             <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <a
-                                        href="registration.php" class="text-danger ">Register</a></small> </div>
+                                        class="text-danger ">Register</a></small> </div>
+                        </div>
+                        <div class="logos col-md-6 offset-md-6">
+                            <div class="card1 pb-5">
+                                <div class="row"> <img src="https://via.placeholder.com/140x100" class="sellogo"> </div>
+                                <div class="row px-3 justify-content-center mt-4 mb-5 selborder-line"> <img
+                                        src="https://via.placeholder.com/150" class="selimage"> </div>
+                            </div>
                         </div>
                     </form>
                 </div>

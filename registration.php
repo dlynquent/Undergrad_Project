@@ -115,59 +115,98 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html>
 
 <head>
-    <title>QWIXS Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Register</title>
+    <?php include 'include\head.php'; ?>
 </head>
 
 <body>
-    <section class="container-fluid">
-        <section class="row justify-content-center">
-            <section class="col-12 col-sm-6 col-md-3">
-                <p>Please fill this form to create an account.</p>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-
-                    <div class="form-group_r <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
-                        <input type="text" name="firstname" class="form-control" placeholder="Enter First Name"
-                            value="<?php echo $firstname; ?>">
-                        <span class="help-block"><?php echo $firstname_err; ?></span>
+    <div class="container px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+        <div class="card card0 border-0">
+            <div class="row d-flex">
+                <div class="col-md-6">
+                    <div class="card1 pb-5">
+                        <div class="row"> <img src="https://via.placeholder.com/140x100" class="logo"> </div>
+                        <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img
+                                src="https://via.placeholder.com/150" class="image"> </div>
                     </div>
+                </div>
+                <div class="col-lg-6">
 
-                    <div class="form-group_r <?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
-                        <input type="text" name="lastname" class="form-control" placeholder="Enter Last Name"
-                            value="<?php echo $lastname; ?>">
-                        <span class="help-block"><?php echo $lastname_err; ?></span>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <div class="card2 card border-0 px-4 py-5">
+                            <h1 class="mb-5 text-lg">Create account</h1>
+                            <div class="row px-3 <?php echo (!empty($firstname_err)) ? 'has-error' : ''; ?>">
+                                <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">Email Address</h6>
+                                </label>
+                                <input type="text" name="firstname" class="form-control"
+                                    placeholder="Enter your First Name" value="<?php echo $firstname; ?>">
+                                <span class="help-block"><?php echo $firstname_err; ?></span>
+                            </div>
+
+                            <div class="row px-3 <?php echo (!empty($lastname_err)) ? 'has-error' : ''; ?>">
+                                <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">Email Address</h6>
+                                </label>
+                                <input type="text" name="lastname" class="form-control"
+                                    placeholder="Enter your Last Name" value="<?php echo $lastname; ?>">
+                                <span class="help-block"><?php echo $lastname_err; ?></span>
+                            </div>
+
+                            <div class="row px-3 <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
+                                <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">Email Address</h6>
+                                </label>
+                                <input type="email" name="email" class="form-control"
+                                    placeholder="Enter your email address" value="<?php echo $email; ?>">
+                                <span class="help-block"><?php echo $email_err; ?></span>
+                            </div>
+
+                            <div class="row px-3 <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                                <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">Email Address</h6>
+                                </label>
+                                <input type="password" name="password" class="form-control" placeholder="Enter Password"
+                                    value="<?php echo $password; ?>">
+                                <span class="help-block"><?php echo $password_err; ?></span>
+                            </div>
+
+                            <div class="row px-3 <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                                <label class="mb-1">
+                                    <h6 class="mb-0 text-sm">Email Address</h6>
+                                </label>
+                                <input type="password" name="confirm_password" class="form-control"
+                                    placeholder="Re-enter password" value="<?php echo $password; ?>">
+                                <span class="help-block"><?php echo $password_err; ?></span>
+                            </div>
+
+                            <div class="row mb-4 px-3"> <small class="font-weight-bold">By continuing you agree to
+                                    Qwixs's <a href="#" class="text-danger ">Conditions of use</a> and <a href="#"
+                                        class="text-danger">Privacy Notice</a> </small>
+                            </div>
+
+                            <div class="row mb-3 px-3"> <button type="submit"
+                                    class="btn btn-blue-reg text-center">Create
+                                    your Qwixs account</button> </div>
+                            <div class="row mb-4 px-3"> <small class="font-weight-bold">Already have an
+                                    account? <a href="login.php" class="text-danger ">Sign-In</a></small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="bg-blue py-4">
+                <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2021. All rights
+                        reserved.</small>
+                    <div class="social-contact ml-4 ml-sm-auto"> <span class="fa fa-facebook mr-4 text-sm"></span> <span
+                            class="fa fa-google-plus mr-4 text-sm"></span> <span
+                            class="fa fa-linkedin mr-4 text-sm"></span>
+                        <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span>
                     </div>
-
-                    <div class="form-group_r <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-                        <input type="email" name="email" class="form-control" placeholder="Enter Email"
-                            value="<?php echo $email; ?>">
-                        <span class="help-block"><?php echo $email_err; ?></span>
-                    </div>
-
-                    <div class="form-group_r <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                        <input type="password" name="password" class="form-control" placeholder="Enter Password"
-                            value="<?php echo $password; ?>">
-                        <span class="help-block"><?php echo $password_err; ?></span>
-                    </div>
-
-                    <div class="form-group_r <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                        <input type="password" name="confirm_password" class="form-control"
-                            placeholder="Confirm Password" value="<?php echo $password; ?>">
-                        <span class="help-block"><?php echo $password_err; ?></span>
-                    </div>
-
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-default">Reset</button>
-
-            </section>
-        </section>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
